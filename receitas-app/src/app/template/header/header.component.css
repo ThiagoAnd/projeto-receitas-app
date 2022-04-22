@@ -1,0 +1,17 @@
+.espaco {
+  flex: 1;
+}
+
+.sidenav {
+  background-color: #3f51B5;
+  width:200px;
+  height: 100%;
+}
+
+.sidenav a {
+  color: #FFF;
+}
+
+a mat-icon {
+  padding-right: 10px;
+}
