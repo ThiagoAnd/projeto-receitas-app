@@ -1,83 +1,49 @@
-<p>
-  <mat-toolbar color="primary">
-    <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" >
+<mat-toolbar color="primary">
+  <div fxHide="true" fxShow.lt-sm>
+    <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>Receitas pessoais</span>
-    <span class="example-spacer"></span>
-    <mat-nav-list fxLayout="row" fxShow="true" fxHide.lt-sm>
-
-      <a mat-list-item routerLink="/">
-          <i class="material-icons">
-              home
-          </i>
-          Home
-      </a>
-      <a mat-list-item routerLink="/products">
-          <i class="material-icons">
-              storefront
-          </i>
-          Produtos
-      </a>
-      <a mat-list-item routerLink="/products">
-        <i class="material-icons">
-            storefront
-        </i>
-        Produtos
+  </div>
+  <span>Receitas pessoais</span>
+  <span class="espaco"></span>
+  <mat-nav-list fxLayout="row" fxShow="true" fxHide.lt-sm >
+    <a mat-list-item routerLink="/">
+      <mat-icon>home</mat-icon>
+      Home
     </a>
-
+    <a mat-list-item routerLink="/criar">
+      <mat-icon>library_add</mat-icon>
+      Criar
+    </a>
+    <a mat-list-item routerLink="/lista">
+      <mat-icon>library_books</mat-icon>
+      Lista
+    </a>
   </mat-nav-list>
-  </mat-toolbar>
-</p>
+</mat-toolbar>
 
-<mat-sidenav-container class="container" >
-  <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64" fixedBottomGap="65" #sidenav>
-      <mat-nav-list>
-          <a mat-list-item routerLink="/">
-              <i class="material-icons">
-                  home
-              </i>
-              Home
-          </a>
-          <a mat-list-item routerLink="/products">
-              <i class="material-icons">
-                  storefront
-              </i>
-              Produtos
-          </a>
-      </mat-nav-list>
+<mat-sidenav-container class="container" fxHide="true" fxShow.lt-sm>
+  <mat-sidenav
+    class="sidenav"
+    mode="side"
+    fixedInViewport="true"
+    fixedTopGap="55"
+    fixedBottomGap="65"
+    #sidenav
+  >
+    <mat-nav-list>
+      <a mat-list-item routerLink="/">
+        <mat-icon>home</mat-icon>
+        Home
+      </a>
+      <a mat-list-item routerLink="/criar">
+        <mat-icon>library_add</mat-icon>
+        Criar
+      </a>
+      <a mat-list-item routerLink="/lista">
+        <mat-icon>library_books</mat-icon>
+        Lista
+      </a>
+    </mat-nav-list>
   </mat-sidenav>
-<mat-sidenav-content class="content">
-  <router-outlet></router-outlet>
-</mat-sidenav-content>
-
 </mat-sidenav-container>
-
-
-
-  <mat-sidenav-container XXfxFlexFill>
-    <mat-sidenav #sidenav>
-      <mat-nav-list>
-        <a href="#" mat-list-item>
-          <mat-icon>notifications</mat-icon>
-          Notifications
-        </a>
-        <a href="#" mat-list-item>
-          <mat-icon>message</mat-icon>
-          Messages</a>
-        <a href="#" mat-list-item>
-          <mat-icon>account_box</mat-icon>
-          My Account
-        </a>
-        <a href="#" mat-list-item>
-          <mat-icon>lock</mat-icon>
-          My Account
-        </a>
-        <a (click)="sidenav.toggle()" mat-list-item>
-          <mat-icon>close</mat-icon> Close
-        </a>
-      </mat-nav-list>
-    </mat-sidenav>
-
-  </mat-sidenav-container>
-
