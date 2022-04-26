@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ReceitaCreateComponent implements OnInit {
 
   constructor() { }
-
+  titulo = 'Pagina de criação';
   ngOnInit(): void {
   }
 

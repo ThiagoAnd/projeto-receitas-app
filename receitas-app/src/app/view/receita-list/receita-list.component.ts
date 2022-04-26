@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ReceitaListComponent implements OnInit {
 
   constructor() { }
-
+  titulo = 'Pagina de listagem';
   ngOnInit(): void {
   }
 
