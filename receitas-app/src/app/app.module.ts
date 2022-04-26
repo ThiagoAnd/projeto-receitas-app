@@ -12,6 +12,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
+import { HomeComponent } from './view/home/home.component';
+import { ReceitaCreateComponent } from './view/receita-create/receita-create.component';
+import { ReceitaListComponent } from './view/receita-list/receita-list.component';
 
 
 
@@ -21,7 +24,10 @@ import {MatButtonModule} from '@angular/material/button';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    ReceitaCreateComponent,
+    ReceitaListComponent
   ],
   imports: [
     BrowserModule,
