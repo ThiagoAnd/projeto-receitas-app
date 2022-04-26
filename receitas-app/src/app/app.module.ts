@@ -15,6 +15,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './view/home/home.component';
 import { ReceitaCreateComponent } from './view/receita-create/receita-create.component';
 import { ReceitaListComponent } from './view/receita-list/receita-list.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -38,7 +40,9 @@ import { ReceitaListComponent } from './view/receita-list/receita-list.component
     FlexLayoutModule,
     MatIconModule,
     MatSidenavModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

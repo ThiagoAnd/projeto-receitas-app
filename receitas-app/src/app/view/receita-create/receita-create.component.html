@@ -2,3 +2,17 @@
   <br />
   <h1>{{ titulo }}</h1>
 </div>
+<div class="container">
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome da receita" />
+      <mat-error> Teste </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Tempo de preparo" />
+      <mat-error> Teste2 </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="salvarReceita()">Salvar</button>
+  </form>
+</div>
+
