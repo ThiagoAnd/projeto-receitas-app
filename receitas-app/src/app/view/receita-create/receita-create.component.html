@@ -4,15 +4,68 @@
 </div>
 <div class="container">
   <form>
-    <mat-form-field>
-      <input matInput placeholder="Nome da receita" />
-      <mat-error> Teste </mat-error>
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Tempo de preparo" />
-      <mat-error> Teste2 </mat-error>
-    </mat-form-field>
-    <button mat-raised-button color="primary" (click)="salvarReceita()">Salvar</button>
+    <div
+      fxLayout="column"
+      fxLayout.gt-xs="row"
+      fxLayoutAlign="space-evenly center"
+      fxLayoutGap="20px"
+    >
+      <mat-form-field>
+        <input matInput placeholder="Nome da receita" />
+        <mat-error> Teste </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>Categoria</mat-label>
+        <select matNativeControl>
+          <option value="Bolo" selected>Bolo</option>
+          <option value="Torta">Torta</option>
+          <option value="Salgado">Salgado</option>
+          <option value="Doce">Doce</option>
+          <option value="Pão">Pão</option>
+          <option value="Diversos">Diversos</option>
+        </select>
+      </mat-form-field>
+    </div>
+
+    <div
+      fxLayout="column"
+      fxLayout.gt-xs="row"
+      fxLayoutAlign="space-evenly center"
+      fxLayoutGap="20px"
+    >
+      <mat-form-field>
+        <input matInput placeholder="Descrição da receita" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Tempo de preparo" />
+        <mat-error> Teste2 </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div
+      fxLayout="column"
+      fxLayout.gt-xs="row"
+      fxLayoutAlign="space-evenly center"
+      fxLayoutGap="20px"
+    >
+      <mat-form-field class="example-full-width" appearance="legacy">
+        <mat-label>Descrição da receita</mat-label>
+        <textarea matInput placeholder=""></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="legacy">
+        <mat-label>Modo de preparo</mat-label>
+        <textarea matInput placeholder=""></textarea>
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
+      <button mat-raised-button color="warn">Cancelar</button>
+      <button mat-raised-button color="primary" (click)="salvarReceita()">
+        Salvar
+      </button>
+    </div>
   </form>
 </div>
-

@@ -1,8 +1,9 @@
 .footer {
-  position: fixed;
+
   bottom: 0;
   display: flex;
   justify-content: flex-end;
+  margin-top: 100px;
 }
 
 .footer  span {
