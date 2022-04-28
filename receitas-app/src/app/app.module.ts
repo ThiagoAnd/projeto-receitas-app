@@ -12,6 +12,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
+import { HomeComponent } from './view/home/home.component';
+import { ReceitaCreateComponent } from './view/receita-create/receita-create.component';
+import { ReceitaListComponent } from './view/receita-list/receita-list.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -21,7 +28,10 @@ import {MatButtonModule} from '@angular/material/button';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    ReceitaCreateComponent,
+    ReceitaListComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +42,11 @@ import {MatButtonModule} from '@angular/material/button';
     FlexLayoutModule,
     MatIconModule,
     MatSidenavModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
