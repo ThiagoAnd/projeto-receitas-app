@@ -8,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ReceitaCreateComponent implements OnInit {
   constructor() {}
   titulo = 'Pagina de criação';
+  nome:string = ""
   ngOnInit(): void {}
 
 
   salvarReceita(){
-    alert("Testando Event Binding para atividade06")
+    alert(`Testando Event Binding e Two way data binding para atividade06 : ${this.nome}`)
   }
 }
