@@ -1,5 +1,6 @@
 .container {
   margin: 60px;
+  padding-bottom: 2.5rem;
 }
 
 mat-form-field {
