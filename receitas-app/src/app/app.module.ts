@@ -21,7 +21,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TituloPaginaComponent } from './template/titulo-pagina/titulo-pagina.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -50,7 +50,8 @@ import { TituloPaginaComponent } from './template/titulo-pagina/titulo-pagina.co
     MatInputModule,
     MatSelectModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

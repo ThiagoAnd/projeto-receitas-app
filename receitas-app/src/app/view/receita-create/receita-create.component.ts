@@ -11,20 +11,24 @@ export class ReceitaCreateComponent implements OnInit {
   formReceita!: FormGroup;
   constructor(private formBuilder: FormBuilder) {}
   pageTitle = 'Pagina de criação';
-  nome: string = '';
+
   ngOnInit() {
     this.criarFormulario(new Receita());
   }
 
   onSubmit() {
-    // aqui você pode implementar a logica para fazer seu formulário salvar
-    console.log("entrou")
+    console.log('entrou');
     console.log(this.formReceita.value);
   }
 
-criarFormulario(receita: Receita) {
+  criarFormulario(receita: Receita) {
     this.formReceita = this.formBuilder.group({
-      nome: [receita.nome]
+      nome: [receita.nome],
+      tempoPreparo: [receita.tempoPreparo],
+      descricao: [receita.descricao],
+      ingredientes: [receita.ingredientes],
+      categoria: [receita.categoria],
+      modoPreparo: [receita.modoPreparo]
     });
   }
 }

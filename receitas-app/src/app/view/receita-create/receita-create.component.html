@@ -15,7 +15,7 @@
 
       <mat-form-field appearance="legacy">
         <mat-label>Categoria</mat-label>
-        <select matNativeControl>
+        <select matNativeControl formControlName="categoria">
           <option value="Bolo" selected>Bolo</option>
           <option value="Torta">Torta</option>
           <option value="Salgado">Salgado</option>
@@ -33,11 +33,11 @@
       fxLayoutGap="20px"
     >
       <mat-form-field>
-        <input matInput placeholder="Descrição da receita" />
+        <input matInput placeholder="Descrição da receita" formControlName="descricao" />
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput placeholder="Tempo de preparo" />
+        <input matInput placeholder="Tempo de preparo" formControlName="tempoPreparo" />
         <mat-error> Teste2 </mat-error>
       </mat-form-field>
     </div>
@@ -48,14 +48,14 @@
       fxLayoutAlign="space-evenly center"
       fxLayoutGap="20px"
     >
-      <mat-form-field class="example-full-width" appearance="legacy">
+      <mat-form-field  appearance="legacy">
         <mat-label>Ingredientes da receita</mat-label>
-        <textarea matInput placeholder=""></textarea>
+        <textarea matInput placeholder="" formControlName="ingredientes"></textarea>
       </mat-form-field>
 
-      <mat-form-field class="example-full-width" appearance="legacy">
+      <mat-form-field  appearance="legacy">
         <mat-label>Modo de preparo</mat-label>
-        <textarea matInput placeholder=""></textarea>
+        <textarea matInput placeholder="" formControlName="modoPreparo"></textarea>
       </mat-form-field>
     </div>
 
