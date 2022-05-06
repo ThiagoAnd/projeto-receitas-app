@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReceitaListComponent implements OnInit {
 
+  pageTitle = 'Pagina de listagem';
   constructor() { }
-  titulo = 'Pagina de listagem';
   ngOnInit(): void {
   }
 

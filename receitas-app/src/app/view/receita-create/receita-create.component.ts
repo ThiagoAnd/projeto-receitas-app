@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Receita } from '../../model/receita.model';
 
 @Component({
   selector: 'app-receita-create',
@@ -6,13 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./receita-create.component.css'],
 })
 export class ReceitaCreateComponent implements OnInit {
-  constructor() {}
-  titulo = 'Pagina de criação';
-  nome:string = ""
-  ngOnInit(): void {}
+  formReceita!: FormGroup;
+  constructor(private formBuilder: FormBuilder) {}
+  pageTitle = 'Pagina de criação';
+  nome: string = '';
+  ngOnInit() {
+    this.criarFormulario(new Receita());
+  }
 
+  onSubmit() {
+    // aqui você pode implementar a logica para fazer seu formulário salvar
+    console.log("entrou")
+    console.log(this.formReceita.value);
+  }
 
-  salvarReceita(){
-    alert(`Testando Event Binding e Two way data binding para atividade06 : ${this.nome}`)
+criarFormulario(receita: Receita) {
+    this.formReceita = this.formBuilder.group({
+      nome: [receita.nome]
+    });
   }
 }
