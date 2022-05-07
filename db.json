@@ -1,0 +1,16 @@
+{
+  "receitas": [
+    {
+      "id": 1
+    },
+    {
+      "nome": "sdff",
+      "tempoPreparo": null,
+      "descricao": "fff",
+      "ingredientes": "fff",
+      "categoria": null,
+      "modoPreparo": null,
+      "id": 2
+    }
+  ]
+}

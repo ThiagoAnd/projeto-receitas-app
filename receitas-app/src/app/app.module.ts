@@ -21,8 +21,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TituloPaginaComponent } from './template/titulo-pagina/titulo-pagina.component';
-import { HttpClientModule } from '@angular/common/http';
-
+import { HttpClientModule } from '@angular/common/http'; //Requisição HTTP
+import {MatTableModule} from '@angular/material/table'; // Utilizar table do angular material
 
 
 
@@ -49,6 +49,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatTableModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
