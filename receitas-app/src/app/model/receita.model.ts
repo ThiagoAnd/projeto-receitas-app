@@ -1,6 +1,6 @@
 export class Receita {
 
-  id?: number
+  id: number = 1
   nome!: string
   tempoPreparo!: number
   descricao!: string

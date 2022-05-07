@@ -1,0 +1,58 @@
+{
+  "receitas": [
+    {
+      "id": 1,
+      "nome": "Bolo de morango",
+      "tempoPreparo": 28,
+      "descricao": "Bolo de morango saboroso",
+      "ingredientes": "Morango, pão de ló,chantilly",
+      "categoria": "Bolo",
+      "modoPreparo": "Faça o bolo com amor"
+    },
+    {
+      "id": 2,
+      "nome": "Bolo de chocolate",
+      "tempoPreparo": 28,
+      "descricao": "Bolo de morango saboroso",
+      "ingredientes": "Chocolate, pão de ló,chantilly",
+      "categoria": "Bolo",
+      "modoPreparo": "Faça o bolo com amor"
+    },
+    {
+      "id": 3,
+      "nome": "Bolo de chocolate",
+      "tempoPreparo": 28,
+      "descricao": "Bolo de morango saboroso",
+      "ingredientes": "Chocolate, pão de ló,chantilly",
+      "categoria": "Bolo",
+      "modoPreparo": "Faça o bolo com amor"
+    },
+    {
+      "nome": "fff",
+      "tempoPreparo": "22",
+      "descricao": "www",
+      "ingredientes": "qqq",
+      "categoria": "Diversos",
+      "modoPreparo": "hhhh",
+      "id": 4
+    },
+    {
+      "nome": "ffffffffffffffwwwwww",
+      "tempoPreparo": "22",
+      "descricao": "www",
+      "ingredientes": "qqq",
+      "categoria": "Diversos",
+      "modoPreparo": "hhhh",
+      "id": 5
+    },
+    {
+      "nome": "asdf",
+      "tempoPreparo": null,
+      "descricao": "www",
+      "ingredientes": null,
+      "categoria": null,
+      "modoPreparo": null,
+      "id": 6
+    }
+  ]
+}

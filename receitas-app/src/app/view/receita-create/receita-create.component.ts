@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Receita } from '../../model/receita.model';
+import { ReceitaService } from '../receita.service';
 
 @Component({
   selector: 'app-receita-create',
@@ -9,7 +10,9 @@ import { Receita } from '../../model/receita.model';
 })
 export class ReceitaCreateComponent implements OnInit {
   formReceita!: FormGroup;
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private service: ReceitaService) {}
   pageTitle = 'Pagina de criação';
 
   ngOnInit() {
@@ -17,8 +20,14 @@ export class ReceitaCreateComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('entrou');
+    console.log('Entrou no fluxo do submit');
     console.log(this.formReceita.value);
+    this.service.create(this.formReceita.value).subscribe(
+      (sucesso) => {
+        alert("Receita salva com sucesso");
+      },
+      (erro) => alert("Não foi possivel salvar a receita. Verifique se o json server esta ligado professor. Erro: "+JSON.stringify(erro))
+    );
   }
 
   criarFormulario(receita: Receita) {
