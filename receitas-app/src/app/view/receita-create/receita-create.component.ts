@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Receita } from '../../model/receita.model';
 import { ReceitaService } from '../receita.service';
 
+
 @Component({
   selector: 'app-receita-create',
   templateUrl: './receita-create.component.html',
@@ -28,6 +29,10 @@ export class ReceitaCreateComponent implements OnInit {
       },
       (erro) => alert("Não foi possivel salvar a receita. Verifique se o json server esta ligado professor. Erro: "+JSON.stringify(erro))
     );
+  }
+
+  onEdit(id: number){
+
   }
 
   criarFormulario(receita: Receita) {

@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './view/home/home.component';
+import { HomeComponent } from './view/receita-home/receita-home.component';
 import { ReceitaCreateComponent } from './view/receita-create/receita-create.component';
 import { ReceitaListComponent } from './view/receita-list/receita-list.component';
+import { ReceitaUpdateComponent } from './view/receita-update/receita-update.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
     path: 'receita/list',
     component: ReceitaListComponent,
   },
+  {
+    path: 'editar/:id',
+    component: ReceitaUpdateComponent,
+  }
 ];
 
 @NgModule({

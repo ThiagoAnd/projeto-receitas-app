@@ -1,7 +1,7 @@
 <app-titulo-pagina [titulo]="pageTitle"></app-titulo-pagina>
 
 <div class="container">
-  <form [formGroup]="formReceita" >
+  <form >
     <div
       fxLayout="column"
       fxLayout.gt-xs="row"
@@ -61,7 +61,7 @@
 
     <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
       <button mat-raised-button color="warn">Cancelar</button>
-      <button mat-raised-button color="primary" (click)="onSubmit()">
+      <button mat-raised-button color="primary" >
         Salvar
       </button>
     </div>

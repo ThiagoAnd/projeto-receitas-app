@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ReceitaService } from '../receita.service';
 import { Receita } from '../../model/receita.model';
-
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,7 +18,9 @@ export class ReceitaListComponent implements OnInit {
   dataSource!: Receita[];
   displayedColumns: string[] = ['id', 'nome', 'tempoPreparo', 'categoria','editar','cancelar'];
 
-  constructor(private service: ReceitaService) {}
+  constructor(
+    private service: ReceitaService,
+    private router: Router) {}
   ngOnInit(): void {
     this.service.list().subscribe((receitas) => {
       this.receitas = receitas;
@@ -29,6 +31,7 @@ export class ReceitaListComponent implements OnInit {
   }
 
   edit(id: number){
-    alert(id)
+    //alert(id)
+    this.router.navigate(['editar', id]);
   }
 }
