@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-receita-update',
@@ -7,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReceitaUpdateComponent implements OnInit {
 
+  id:number | undefined;
   pageTitle = 'Pagina de atualização';
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+        this.route.params.subscribe(
+      (params:any) => {
+        this.id = params.id;
+
+      }
+    )
   }
 
 }
