@@ -12,15 +12,18 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
-import { HomeComponent } from './view/home/home.component';
+import { HomeComponent } from './view/receita-home/receita-home.component';
 import { ReceitaCreateComponent } from './view/receita-create/receita-create.component';
 import { ReceitaListComponent } from './view/receita-list/receita-list.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { TituloPaginaComponent } from './template/titulo-pagina/titulo-pagina.component';
+import { HttpClientModule } from '@angular/common/http'; //Requisição HTTP
+import {MatTableModule} from '@angular/material/table';
+import { ReceitaUpdateComponent } from './view/receita-update/receita-update.component'; // Utilizar table do angular material
 
 
 
@@ -31,7 +34,9 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     HomeComponent,
     ReceitaCreateComponent,
-    ReceitaListComponent
+    ReceitaListComponent,
+    TituloPaginaComponent,
+    ReceitaUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,10 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    FormsModule
+    MatTableModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
