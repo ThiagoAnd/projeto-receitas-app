@@ -23,6 +23,10 @@ export class ReceitaCreateComponent implements OnInit {
   onSubmit() {
     console.log('Entrou no fluxo do submit');
     console.log(this.formReceita.value);
+    console.log(this.formReceita.valid);
+    console.log(this.formReceita)
+    if(!this.formReceita.valid)
+      return;
     this.service.create(this.formReceita.value).subscribe(
       (sucesso) => {
         alert("Receita salva com sucesso");
