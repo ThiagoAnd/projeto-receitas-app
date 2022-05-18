@@ -29,6 +29,7 @@ export class ReceitaCreateComponent implements OnInit {
     this.service.create(this.formReceita.value).subscribe(
       (sucesso) => {
         alert("Receita salva com sucesso");
+        this.formReceita.reset();
       },
       (erro) => alert("Não foi possivel salvar a receita. Verifique se o json server esta ligado professor. Erro: "+JSON.stringify(erro))
     );
