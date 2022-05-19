@@ -24,12 +24,7 @@
         <mat-label>Categoria</mat-label>
         <select matNativeControl formControlName="categoria" required>
           <option  selected></option>
-          <option value="Bolo">Bolo</option>
-          <option value="Torta">Torta</option>
-          <option value="Salgado">Salgado</option>
-          <option value="Doce">Doce</option>
-          <option value="Pão">Pão</option>
-          <option value="Diversos">Diversos</option>
+          <option *ngFor="let categoria of categorias" [value]="categoria">{{categoria}}</option>
         </select>
         <mat-error>
           <div *ngIf="formReceita.controls['categoria'].errors?.required">
