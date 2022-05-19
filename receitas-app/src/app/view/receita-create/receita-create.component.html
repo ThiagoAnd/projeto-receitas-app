@@ -9,13 +9,13 @@
       fxLayoutGap="20px"
     >
       <mat-form-field>
-        <input matInput placeholder="Nome da receita" formControlName="nome" pattern="^[A-Z][a-z]{3,}[a-zA-Z\s]*$"  required/>
+        <input matInput placeholder="Nome da receita" formControlName="nome" pattern="^[A-Z][a-zá-ú]{3,}[a-zA-Zá-ú\s]*$"  required/>
         <mat-error>
           <div *ngIf="formReceita.controls['nome'].errors?.required">
             É necessario digitar um nome para a receita
           </div>
           <div *ngIf="formReceita.controls['nome'].errors?.pattern">
-            É necessario iniciar o nome com uma letra maiuscula e ter a primeira palavra com pelo menos 4 caracteres
+            É necessario iniciar o nome com uma letra maiuscula e ter a primeira palavra com pelo menos 4 caracteres (Bolo de ..)
           </div>
         </mat-error>
       </mat-form-field>
@@ -41,13 +41,13 @@
       fxLayoutGap="20px"
     >
       <mat-form-field>
-        <input matInput placeholder="Descrição da receita" formControlName="descricao" pattern="^[A-Z][a-z]{3,}[a-zA-Z\s]*$"  required/>
+        <input matInput placeholder="Descrição da receita" formControlName="descricao" pattern="^[A-Z][a-zá-ú]{3,}[a-zA-Zá-ú\s]*$"  required/>
         <mat-error>
           <div *ngIf="formReceita.controls['descricao'].errors?.required">
             É necessario digitar uma descrição para a receita
           </div>
           <div *ngIf="formReceita.controls['descricao'].errors?.pattern">
-            É necessario iniciar a descrição com uma letra maiuscula e ter a primeira palavra com pelo menos 4 caracteres
+            É necessario iniciar a descrição com uma letra maiuscula e ter a primeira palavra com pelo menos 4 caracteres (Descrição da ...)
           </div>
         </mat-error>
       </mat-form-field>
@@ -73,7 +73,7 @@
     >
       <mat-form-field  appearance="legacy">
         <mat-label>Ingredientes da receita</mat-label>
-        <textarea matInput placeholder="" formControlName="ingredientes" pattern="[\w\s.+-:\*]*$" required></textarea>
+        <textarea matInput placeholder="" formControlName="ingredientes" pattern="[\wá-ú\s.+-:\*]*$" required></textarea>
         <mat-error>
           <div *ngIf="formReceita.controls['ingredientes'].errors?.required">
             É necessario digitar os ingredientes para a receita
@@ -86,7 +86,7 @@
 
       <mat-form-field  appearance="legacy">
         <mat-label>Modo de preparo</mat-label>
-        <textarea matInput placeholder="" formControlName="modoPreparo" pattern="[\w\s.+-:\*]*$" required></textarea>
+        <textarea matInput placeholder="" formControlName="modoPreparo" pattern="[\wá-ú\s.+-:\*]*$" required></textarea>
         <mat-error>
           <div *ngIf="formReceita.controls['modoPreparo'].errors?.required">
             É necessario digitar o modo de preparo para a receita

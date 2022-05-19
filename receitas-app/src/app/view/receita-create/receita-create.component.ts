@@ -36,9 +36,9 @@ export class ReceitaCreateComponent implements OnInit {
     this.receitas = this.service.getReceitasOnWebStorage();
     console.log("Receitas cadastradas pelo Web storage: ")
     console.log(JSON.stringify(this.receitas))
-    alert(JSON.stringify(this.receitas,null,4))
+    // alert(JSON.stringify(this.receitas,null,4))
 
-    return;
+    // return;
     this.service.create(this.formReceita.value).subscribe(
       (sucesso) => {
         alert("Receita salva com sucesso");
