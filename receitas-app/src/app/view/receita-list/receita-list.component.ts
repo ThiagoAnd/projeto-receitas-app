@@ -31,7 +31,10 @@ export class ReceitaListComponent implements OnInit {
   }
 
   edit(id: number){
-    //alert(id)
     this.router.navigate(['editar', id]);
+  }
+
+  delete(id: number){
+    alert("Id a ser deletado")
   }
 }
