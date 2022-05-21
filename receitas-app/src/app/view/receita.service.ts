@@ -35,4 +35,8 @@ export class ReceitaService {
     this.receitas = WebStorageUtil.get(Constants.RECEITAS_KEY);
     return this.receitas;
   }
+
+  getReceita(id: number){
+    return this.http.get<Receita>(`${this.API}/receitas/${id}`).pipe(take(1))
+  }
 }

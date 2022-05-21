@@ -22,8 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TituloPaginaComponent } from './template/titulo-pagina/titulo-pagina.component';
 import { HttpClientModule } from '@angular/common/http'; //Requisição HTTP
-import {MatTableModule} from '@angular/material/table';
-import { ReceitaUpdateComponent } from './view/receita-update/receita-update.component'; // Utilizar table do angular material
+import {MatTableModule} from '@angular/material/table'; // Utilizar table do angular material
 
 
 
@@ -35,8 +34,7 @@ import { ReceitaUpdateComponent } from './view/receita-update/receita-update.com
     HomeComponent,
     ReceitaCreateComponent,
     ReceitaListComponent,
-    TituloPaginaComponent,
-    ReceitaUpdateComponent
+    TituloPaginaComponent
   ],
   imports: [
     BrowserModule,

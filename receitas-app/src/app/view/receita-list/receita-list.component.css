@@ -10,3 +10,7 @@ table {
 th.mat-header-cell,td.mat-cell {
   text-align: center !important;
 }
+
+.container {
+  padding-bottom: 3.5rem;
+}
