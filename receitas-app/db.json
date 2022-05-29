@@ -1,31 +1,13 @@
 {
   "receitas": [
     {
-      "id": 1,
-      "nome": "Bolo de morango",
-      "tempoPreparo": 28,
-      "descricao": "Bolo de morango saboroso",
-      "ingredientes": "Morango, pão de ló,chantilly",
-      "categoria": "Bolo",
-      "modoPreparo": "Faça o bolo com amor"
-    },
-    {
-      "id": 2,
-      "nome": "Bolo de chocolate",
-      "tempoPreparo": 28,
-      "descricao": "Bolo de morango saboroso",
-      "ingredientes": "Chocolate, pão de ló,chantilly",
-      "categoria": "Bolo",
-      "modoPreparo": "Faça o bolo com amor"
-    },
-    {
-      "nome": "Essss",
-      "tempoPreparo": "74",
-      "descricao": "Wsss",
-      "ingredientes": "Waaa",
+      "nome": "Hsss",
+      "tempoPreparo": "585",
+      "descricao": "Asss",
+      "ingredientes": "asdfasdf",
       "categoria": "Pão",
-      "modoPreparo": "asdf",
-      "id": 3
+      "modoPreparo": "asdfasdf",
+      "id": 1
     }
   ]
 }

@@ -39,8 +39,15 @@
 
   <ng-container matColumnDef="cancelar">
     <th mat-header-cell *matHeaderCellDef> Deletar </th>
-    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="danger" type="submit" (click)="delete(element.id)">
-      Cancelar
+    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="warn" type="submit" (click)="delete(element.id)">
+      Deletar
+    </button> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="visualizar">
+    <th mat-header-cell *matHeaderCellDef> Visualizar </th>
+    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="accent" type="submit" (click)="view(element.id)">
+      Visualizar
     </button> </td>
   </ng-container>
 
