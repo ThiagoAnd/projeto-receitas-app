@@ -16,9 +16,12 @@ export class ReceitaService {
 
   constructor(private http: HttpClient) {}
 
-  //TODO Fazer unsubscribe depois
   create(receita: Receita) {
     return this.http.post(`${this.API}/receitas`, receita);
+  }
+
+  createWithPromise(receita: Receita):Promise<Receita> {
+    return this.http.post<Receita>(`${this.API}/receitas`, receita).toPromise();
   }
 
   list() {
