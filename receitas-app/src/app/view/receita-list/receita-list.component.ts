@@ -16,7 +16,7 @@ export class ReceitaListComponent implements OnInit {
   pageTitle = 'Pagina de listagem';
   receitas!: Receita[];
   dataSource!: Receita[];
-  displayedColumns: string[] = ['id', 'nome', 'tempoPreparo', 'categoria','editar','cancelar'];
+  displayedColumns: string[] = ['id', 'nome', 'tempoPreparo', 'categoria','editar','cancelar','visualizar'];
 
   constructor(
     private service: ReceitaService,
@@ -34,7 +34,18 @@ export class ReceitaListComponent implements OnInit {
     this.router.navigate(['editar', id]);
   }
 
+  view(id:number){
+    alert("Vai para a tela de visualização")
+  }
+
   delete(id: number){
-    alert("Id a ser deletado")
+    if(confirm("Deseja realmente deletar a receita?") == true){
+      this.service.remove(id)
+      .subscribe(
+        sucesso => window.location.reload(),
+        erro => alert("Erro ao deletar receita")
+      );
+    }
+
   }
 }
