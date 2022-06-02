@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng s --live-reload",
-    "json:server": "json-server --watch db.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "app": "ng s --live-reload false",
+    "json:server": "json-server --watch db.json",
+    "start:app:server": "concurrently --kill-others \"npm run json:server\" \"npm run app\""
   },
   "private": true,
   "dependencies": {
@@ -23,6 +24,7 @@
     "@angular/platform-browser": "~13.3.4",
     "@angular/platform-browser-dynamic": "~13.3.4",
     "@angular/router": "~13.3.4",
+    "concurrently": "^7.2.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

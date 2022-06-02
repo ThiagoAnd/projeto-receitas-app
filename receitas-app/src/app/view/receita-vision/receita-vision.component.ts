@@ -10,6 +10,8 @@ import { map, switchMap } from 'rxjs/operators';
 })
 export class ReceitaVisionComponent implements OnInit {
 
+  pageTitle = 'Pagina de visualização';
+
   constructor(
     private route: ActivatedRoute,
     private service: ReceitaService

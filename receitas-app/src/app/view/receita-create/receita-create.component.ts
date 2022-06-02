@@ -25,12 +25,15 @@ export class ReceitaCreateComponent implements OnInit {
   categorias = ['Bolo', 'Torta', 'Salgado', 'Doce', 'Pão', 'Diversos'];
 
   ngOnInit() {
+
     this.route.params
       .pipe(
         map((params: any) => params['id']),
         switchMap((id) => this.service.getReceita(id))
       )
-      .subscribe((receita) => this.updateForm(receita));
+      .subscribe((receita) => {
+        this.pageTitle = 'Pagina de edição';
+        this.updateForm(receita)});
 
     this.criarFormulario(new Receita());
   }
