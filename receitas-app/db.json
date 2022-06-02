@@ -1,13 +1,13 @@
 {
   "receitas": [
     {
-      "nome": "Hsss",
-      "tempoPreparo": "585",
-      "descricao": "Asss",
+      "nome": "Bolo de laranja",
+      "tempoPreparo": "88",
+      "descricao": "Descrição da",
       "ingredientes": "asdfasdf",
-      "categoria": "Pão",
-      "modoPreparo": "asdfasdf",
-      "id": 1
+      "categoria": "Salgado",
+      "modoPreparo": "asdf",
+      "id": 2
     }
   ]
 }

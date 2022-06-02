@@ -49,26 +49,13 @@ export class ReceitaCreateComponent implements OnInit {
   onSubmit() {
     if (!this.formReceita.valid) return;
 
-    this.service
-      .createWithPromise(this.formReceita.value)
-      .then((sucesso) => {
-        alert('Receita salva com PROMISE');
-        window.location.reload();
-      })
-      .catch((e) =>
-        alert(
-          'Não foi possivel salvar a receita com PROMISE. Verifique se o json server esta ligado professor. Erro: ' +
-            JSON.stringify(e)
-        )
-      );
-
-    // this.service.create(this.formReceita.value).subscribe(
-    //   (sucesso) => {
-    //     alert("Receita salva com sucesso");
-    //      window.location.reload();
-    //   },
-    //   (erro) => alert("Não foi possivel salvar a receita. Verifique se o json server esta ligado professor. Erro: "+JSON.stringify(erro))
-    // );
+    this.service.create(this.formReceita.value).subscribe(
+      (sucesso) => {
+        alert("Receita salva com sucesso");
+         window.location.reload();
+      },
+      (erro) => alert("Não foi possivel salvar a receita. Verifique se o json server esta ligado professor. Erro: "+JSON.stringify(erro))
+    );
   }
 
   criarFormulario(receita: Receita) {
