@@ -53,6 +53,7 @@ import {MatCardModule} from '@angular/material/card';  //Card angular material
     MatInputModule,
     MatSelectModule,
     MatTableModule,
+    MatCardModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule

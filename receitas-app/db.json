@@ -3,11 +3,11 @@
     {
       "nome": "Bolo de laranja",
       "tempoPreparo": "88",
-      "descricao": "Descrição da",
-      "ingredientes": "asdfasdf",
-      "categoria": "Salgado",
-      "modoPreparo": "asdf",
-      "id": 2
+      "descricao": "Bolo de laranja fofinho",
+      "ingredientes": "6 colheres de sopa de açucar\n2 xícaras de farinha\n4 laranjas\n2 ovos\n500ml de leite",
+      "categoria": "Bolo",
+      "modoPreparo": "Bata tudo no liquidificador\nColoque em forma untada\nasse a 180 graus por 80 minutos",
+      "id": 3
     }
   ]
 }
