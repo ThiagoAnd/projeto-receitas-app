@@ -1,13 +1,40 @@
 {
   "receitas": [
     {
+      "id": 1,
+      "nome": "Tortilha",
+      "tempoPreparo": "22",
+      "descricao": "Gsss",
+      "ingredientes": "Wsss",
+      "categoria": "Torta",
+      "modoPreparo": "asf"
+    },
+    {
+      "id": 2,
+      "nome": "Gaaa",
+      "tempoPreparo": "77",
+      "descricao": "Wsse",
+      "ingredientes": "asfdasfd",
+      "categoria": "Doce",
+      "modoPreparo": "asfd"
+    },
+    {
+      "id": 3,
+      "nome": "Jaaaa",
+      "tempoPreparo": "33",
+      "descricao": "Haaaaaa",
+      "ingredientes": "asfdf",
+      "categoria": "Pão",
+      "modoPreparo": "asfdasfd"
+    },
+    {
+      "id": 4,
       "nome": "Bolo de laranja",
-      "tempoPreparo": "88",
-      "descricao": "Bolo de laranja fofinho",
-      "ingredientes": "6 colheres de sopa de açucar\n2 xícaras de farinha\n4 laranjas\n2 ovos\n500ml de leite",
+      "tempoPreparo": "160",
+      "descricao": "Bolo fofinho da vovó",
+      "ingredientes": "3 ovos\n3 xicaras de farinha\nsuco de 4 laranjas\n1 xicara de açúcar\nMeia xicara de óleo",
       "categoria": "Bolo",
-      "modoPreparo": "Bata tudo no liquidificador\nColoque em forma untada\nasse a 180 graus por 80 minutos",
-      "id": 3
+      "modoPreparo": "Bater tudo no liquidificador\nColocar por ultimo o fermento\nDepois despejar na forma\nAssar em 180 graus por 40 min"
     }
   ]
 }

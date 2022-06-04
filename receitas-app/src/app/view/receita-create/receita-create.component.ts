@@ -4,7 +4,7 @@ import { Shared } from 'src/app/util/shared';
 import { Receita } from '../../model/receita.model';
 import { ReceitaService } from '../receita.service';
 import { map, switchMap } from 'rxjs/operators';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-receita-create',
@@ -18,14 +18,14 @@ export class ReceitaCreateComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
-    private service: ReceitaService
+    private service: ReceitaService,
+    private router: Router
   ) {}
   pageTitle = 'Pagina de criação';
 
   categorias = ['Bolo', 'Torta', 'Salgado', 'Doce', 'Pão', 'Diversos'];
 
   ngOnInit() {
-
     this.route.params
       .pipe(
         map((params: any) => params['id']),
@@ -52,18 +52,23 @@ export class ReceitaCreateComponent implements OnInit {
   onSubmit() {
     if (!this.formReceita.valid) return;
 
-    this.service.create(this.formReceita.value).subscribe(
+    this.service.save(this.formReceita.value).subscribe(
       (sucesso) => {
-        alert("Receita salva com sucesso");
-         window.location.reload();
+        if(this.formReceita.value.id){
+        alert("Receita atualizada com sucesso");
+      }else {
+        alert("Receita salva com sucesso")
+      }
+      this.router.navigate(['receita/list']);
       },
-      (erro) => alert("Não foi possivel salvar a receita. Verifique se o json server esta ligado professor. Erro: "+JSON.stringify(erro))
+      (erro) => alert("Não foi possivel salvar/atualizar a receita. Verifique se o json server esta ligado professor. Erro: "+JSON.stringify(erro))
     );
   }
 
   criarFormulario(receita: Receita) {
     console.log('receita criar formularioasdf: ' + JSON.stringify(receita));
     this.formReceita = this.formBuilder.group({
+      id: null,
       nome: [receita.nome],
       tempoPreparo: [receita.tempoPreparo],
       descricao: [receita.descricao],
