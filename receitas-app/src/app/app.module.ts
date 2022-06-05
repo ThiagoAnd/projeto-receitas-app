@@ -24,7 +24,8 @@ import { TituloPaginaComponent } from './template/titulo-pagina/titulo-pagina.co
 import { HttpClientModule } from '@angular/common/http'; //Requisição HTTP
 import {MatTableModule} from '@angular/material/table';
 import { ReceitaVisionComponent } from './view/receita-vision/receita-vision.component'; // Utilizar table do angular material
-import {MatCardModule} from '@angular/material/card';  //Card angular material
+import {MatCardModule} from '@angular/material/card';
+import { TempoPipe } from './util/tempo.pipe';  //Card angular material
 
 
 
@@ -37,7 +38,8 @@ import {MatCardModule} from '@angular/material/card';  //Card angular material
     ReceitaCreateComponent,
     ReceitaListComponent,
     TituloPaginaComponent,
-    ReceitaVisionComponent
+    ReceitaVisionComponent,
+    TempoPipe
   ],
   imports: [
     BrowserModule,

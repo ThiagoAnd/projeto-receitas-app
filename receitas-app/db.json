@@ -35,6 +35,15 @@
       "ingredientes": "3 ovos\n3 xicaras de farinha\nsuco de 4 laranjas\n1 xicara de açúcar\nMeia xicara de óleo",
       "categoria": "Bolo",
       "modoPreparo": "Bater tudo no liquidificador\nColocar por ultimo o fermento\nDepois despejar na forma\nAssar em 180 graus por 40 min"
+    },
+    {
+      "id": 5,
+      "nome": "Gaaa",
+      "tempoPreparo": "60",
+      "descricao": "Essss",
+      "ingredientes": "asdf",
+      "categoria": "Doce",
+      "modoPreparo": "asdf"
     }
   ]
 }

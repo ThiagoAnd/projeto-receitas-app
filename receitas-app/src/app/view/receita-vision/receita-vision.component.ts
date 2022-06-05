@@ -20,7 +20,7 @@ export class ReceitaVisionComponent implements OnInit {
   nome?: string;
   descricao?: string;
   categoria?: string;
-  tempoPreparo?: number;
+  tempoPreparo!: number;
   ingredientes?: string;
   modoPreparo?: string;
 
