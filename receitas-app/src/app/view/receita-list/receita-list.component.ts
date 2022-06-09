@@ -35,7 +35,7 @@ export class ReceitaListComponent implements OnInit {
   }
 
   view(id:number){
-    alert("Vai para a tela de visualização")
+    this.router.navigate(['visualizar', id]);
   }
 
   delete(id: number){

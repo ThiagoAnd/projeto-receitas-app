@@ -22,7 +22,10 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TituloPaginaComponent } from './template/titulo-pagina/titulo-pagina.component';
 import { HttpClientModule } from '@angular/common/http'; //Requisição HTTP
-import {MatTableModule} from '@angular/material/table'; // Utilizar table do angular material
+import {MatTableModule} from '@angular/material/table';
+import { ReceitaVisionComponent } from './view/receita-vision/receita-vision.component'; // Utilizar table do angular material
+import {MatCardModule} from '@angular/material/card';
+import { TempoPipe } from './util/tempo.pipe';  //Card angular material
 
 
 
@@ -34,7 +37,9 @@ import {MatTableModule} from '@angular/material/table'; // Utilizar table do ang
     HomeComponent,
     ReceitaCreateComponent,
     ReceitaListComponent,
-    TituloPaginaComponent
+    TituloPaginaComponent,
+    ReceitaVisionComponent,
+    TempoPipe
   ],
   imports: [
     BrowserModule,
@@ -50,6 +55,7 @@ import {MatTableModule} from '@angular/material/table'; // Utilizar table do ang
     MatInputModule,
     MatSelectModule,
     MatTableModule,
+    MatCardModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule

@@ -12,17 +12,27 @@ import { Constants } from '../util/constants';
 })
 export class ReceitaService {
   private readonly API = environment.API;
-  receitas!: Receita []
+  receitas!: Receita[];
 
   constructor(private http: HttpClient) {}
 
   //Com o take 1, a partir da ida e volta do servidor , ja finaliza o observable e não precisa fazer unsubscribe
 
   create(receita: Receita) {
-    return this.http.post(`${this.API}/receitas`, receita);
+    return this.http.post(`${this.API}/receitas`, receita).pipe(take(1));
   }
 
-  createWithPromise(receita: Receita):Promise<Receita> {
+  update(receita: Receita) {
+    return this.http.put(`${this.API}/receitas/${receita.id}`,receita).pipe(take(1))
+  }
+
+  save(receita: Receita) {
+    if (receita.id)
+      return this.update(receita);
+    return this.create(receita);
+  }
+
+  createWithPromise(receita: Receita): Promise<Receita> {
     return this.http.post<Receita>(`${this.API}/receitas`, receita).toPromise();
   }
 
@@ -41,11 +51,11 @@ export class ReceitaService {
     return this.receitas;
   }
 
-  getReceita(id: number){
-    return this.http.get<Receita>(`${this.API}/receitas/${id}`).pipe(take(1))
+  getReceita(id: number) {
+    return this.http.get<Receita>(`${this.API}/receitas/${id}`).pipe(take(1));
   }
 
-  remove(id: number){
-    return  this.http.delete(`${this.API}/receitas/${id}`).pipe(take(1))
+  remove(id: number) {
+    return this.http.delete(`${this.API}/receitas/${id}`).pipe(take(1));
   }
 }

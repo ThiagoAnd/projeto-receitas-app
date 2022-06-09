@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './view/receita-home/receita-home.component';
 import { ReceitaCreateComponent } from './view/receita-create/receita-create.component';
 import { ReceitaListComponent } from './view/receita-list/receita-list.component';
+import { ReceitaVisionComponent } from './view/receita-vision/receita-vision.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'editar/:id',
     component: ReceitaCreateComponent,
+  },
+  {
+    path: 'visualizar/:id',
+    component: ReceitaVisionComponent,
   }
 ];
 
