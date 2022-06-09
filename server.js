@@ -1,9 +1,11 @@
 const express = require('express');
-const path = require('path');
+const jsonServer = require('json-server');
+
 const app = express();
 
 const PORT = process.env.PORT || 8080;
 
+app.use('/receitas',jsonServer.router('db.json'))
 app.use(express.static(__dirname + '/dist/receitas-app'));
 
 app.get('/*',(req,res)=> {
