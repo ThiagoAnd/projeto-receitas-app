@@ -9,7 +9,8 @@
     "e2e": "ng e2e",
     "app": "ng s --live-reload false",
     "json:server": "json-server --watch db.json",
-    "start:app:server": "concurrently --kill-others \"npm run json:server\" \"npm run app\""
+    "start:app:server": "concurrently --kill-others \"npm run json:server\" \"npm run app\"",
+    "start:node:server": "concurrently --kill-others \"npm run json:server\" \"npm start\""
   },
   "private": true,
   "dependencies": {
