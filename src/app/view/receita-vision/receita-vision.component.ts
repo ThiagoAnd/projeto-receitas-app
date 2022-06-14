@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ReceitaService } from '../receita.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Route,Router } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
 import { Receita } from 'src/app/model/receita.model';
 
@@ -15,7 +15,8 @@ export class ReceitaVisionComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private service: ReceitaService
+    private service: ReceitaService,
+    private router: Router
   ) { }
   nome?: string;
   descricao?: string;
@@ -40,6 +41,14 @@ export class ReceitaVisionComponent implements OnInit {
         this.ingredientes = receita.ingredientes;
         this.modoPreparo = receita.modoPreparo;
       });
+  }
+
+  backToList(){
+    this.router.navigate(['receita/list']);
+  }
+
+  print(){
+    window.print();
   }
 
 }

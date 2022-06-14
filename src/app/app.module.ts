@@ -26,6 +26,7 @@ import {MatTableModule} from '@angular/material/table';
 import { ReceitaVisionComponent } from './view/receita-vision/receita-vision.component'; // Utilizar table do angular material
 import {MatCardModule} from '@angular/material/card';
 import { TempoPipe } from './util/tempo.pipe';  //Card angular material
+import {NgxPrintModule} from 'ngx-print';
 
 
 
@@ -58,7 +59,8 @@ import { TempoPipe } from './util/tempo.pipe';  //Card angular material
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPrintModule
   ],
   providers: [],
   bootstrap: [AppComponent]

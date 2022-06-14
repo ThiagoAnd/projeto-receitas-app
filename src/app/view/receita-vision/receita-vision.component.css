@@ -16,3 +16,10 @@
   white-space: pre-wrap;
 }
 
+@media print{
+  button {
+    display: none;
+  }
+  
+}
+

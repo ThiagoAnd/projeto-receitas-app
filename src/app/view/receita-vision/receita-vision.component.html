@@ -1,6 +1,6 @@
 <app-titulo-pagina [titulo]="pageTitle"></app-titulo-pagina>
 
-<mat-card class="example-card">
+<mat-card id="printar" class="example-card">
   <div
     fxLayout="column"
     fxLayout.gt-xs="row"
@@ -23,8 +23,12 @@
     <div class="message" [innerHTML]="modoPreparo"></div>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>Voltar</button>
-    <button mat-button>Imprimir</button>
+    <button mat-button (click)="backToList()">Voltar</button>
+    <button mat-button
+    printSectionId="printar"
+    printTitle="Receita "
+    [useExistingCss]="true"
+     ngxPrint>Imprimir</button>
   </mat-card-actions>
 </mat-card>
 
