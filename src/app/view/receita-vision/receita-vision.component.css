@@ -21,6 +21,15 @@ h4 {
   button {
     display: none;
   }
+  div,h4 {
+    font-size: 20px;
+  }
+  mat-card-content,div,h4 {
+    margin-left: 15px;
+  }
+  .sobre {
+    margin-top: 50px;
+  }
 
 }
 

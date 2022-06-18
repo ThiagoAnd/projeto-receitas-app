@@ -8,7 +8,7 @@
     fxLayoutAlign="space-between center"
     fxLayoutGap="90px"
   >
-    <div>
+    <div class="sobre">
       <mat-card-title>{{ nome }}</mat-card-title>
       <mat-card-subtitle>{{ descricao }}</mat-card-subtitle>
     </div>
@@ -23,7 +23,7 @@
     <button mat-button (click)="backToList()">Voltar</button>
     <button mat-button
     printSectionId="printar"
-    printTitle="Receita "
+    printTitle="Receita de {{nome}}"
     [useExistingCss]="true"
      ngxPrint>Imprimir</button>
   </mat-card-actions>
