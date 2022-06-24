@@ -1,7 +1,7 @@
 <app-titulo-pagina [titulo]="pageTitle"></app-titulo-pagina>
 
-<mat-card id="printar" class="example-card">
-  <div class="stack-top">{{ categoria }}<br>{{ tempoPreparo | tempo}}</div>
+<mat-card id="printar" class="card-receita">
+  <div class="stack-top">{{ categoria }}<br />{{ tempoPreparo | tempo }}</div>
   <div
     fxLayout="column"
     fxLayout.gt-xs="row"
@@ -15,19 +15,21 @@
   </div>
   <mat-card-content>
     <h4>Ingredientes:</h4>
-    <div class="message" [innerHTML]="ingredientes"></div><br>
+    <div class="message" [innerHTML]="ingredientes"></div>
+    <br />
     <h4>Modo de preparo:</h4>
     <div class="message" [innerHTML]="modoPreparo"></div>
   </mat-card-content>
   <mat-card-actions>
     <button mat-button (click)="backToList()">Voltar</button>
-    <button mat-button
-    printSectionId="printar"
-    printTitle="Receita de {{nome}}"
-    [useExistingCss]="true"
-     ngxPrint>Imprimir</button>
+    <button
+      mat-button
+      printSectionId="printar"
+      printTitle="Receita de {{ nome }}"
+      [useExistingCss]="true"
+      ngxPrint
+    >
+      Imprimir
+    </button>
   </mat-card-actions>
 </mat-card>
-
-
-

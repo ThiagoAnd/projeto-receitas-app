@@ -1,5 +1,7 @@
-
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 app-footer {
   margin-top: auto;
@@ -8,8 +10,5 @@ app-footer {
 app-root {
   min-height: 100vh;
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
 }
-
-
-

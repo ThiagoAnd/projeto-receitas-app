@@ -25,7 +25,7 @@ const routes: Routes = [
   {
     path: 'visualizar/:id',
     component: ReceitaVisionComponent,
-  }
+  },
 ];
 
 @NgModule({

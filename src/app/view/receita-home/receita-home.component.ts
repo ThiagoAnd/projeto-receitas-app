@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./receita-home.component.css'],
 })
 export class HomeComponent implements OnInit {
-
   pageTitle = 'Pagina home';
   constructor() {}
   ngOnInit(): void {}

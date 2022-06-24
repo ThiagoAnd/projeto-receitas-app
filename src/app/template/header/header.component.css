@@ -4,7 +4,7 @@
 
 .sidenav {
   background-color: #3f51B5;
-  width:200px;
+  width: 200px;
   height: 100%;
 }
 
@@ -15,5 +15,3 @@
 a mat-icon {
   padding-right: 10px;
 }
-
-

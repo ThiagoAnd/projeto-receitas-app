@@ -9,13 +9,20 @@
       fxLayoutGap="20px"
     >
       <mat-form-field>
-        <input matInput placeholder="Nome da receita" formControlName="nome" pattern="^[A-Z][a-zá-ú]{3,}[a-zA-Zá-ú\s]*$"  required/>
+        <input
+          matInput
+          placeholder="Nome da receita"
+          formControlName="nome"
+          pattern="^[A-Z][a-zá-ú]{3,}[a-zA-Zá-ú\s]*$"
+          required
+        />
         <mat-error>
           <div *ngIf="formReceita.controls['nome'].errors?.required">
             É necessario digitar um nome para a receita
           </div>
           <div *ngIf="formReceita.controls['nome'].errors?.pattern">
-            É necessario iniciar o nome com a primeira letra maiuscula e ter a primeira palavra com pelo menos 4 caracteres (Bolo de ..)
+            É necessario iniciar o nome com a primeira letra maiuscula e ter a
+            primeira palavra com pelo menos 4 caracteres (Bolo de ..)
           </div>
         </mat-error>
       </mat-form-field>
@@ -23,8 +30,10 @@
       <mat-form-field appearance="legacy">
         <mat-label>Categoria</mat-label>
         <select matNativeControl formControlName="categoria" required>
-          <option  selected></option>
-          <option *ngFor="let categoria of categorias" [value]="categoria">{{categoria}}</option>
+          <option selected></option>
+          <option *ngFor="let categoria of categorias" [value]="categoria">
+            {{ categoria }}
+          </option>
         </select>
         <mat-error>
           <div *ngIf="formReceita.controls['categoria'].errors?.required">
@@ -41,19 +50,33 @@
       fxLayoutGap="20px"
     >
       <mat-form-field>
-        <input matInput placeholder="Descrição da receita" formControlName="descricao" pattern="^[A-Z][a-zá-ú]{3,}[a-zA-Zá-ú\s]*$"  required/>
+        <input
+          matInput
+          placeholder="Descrição da receita"
+          formControlName="descricao"
+          pattern="^[A-Z][a-zá-ú]{3,}[a-zA-Zá-ú\s]*$"
+          required
+        />
         <mat-error>
           <div *ngIf="formReceita.controls['descricao'].errors?.required">
             É necessario digitar uma descrição para a receita
           </div>
           <div *ngIf="formReceita.controls['descricao'].errors?.pattern">
-            É necessario iniciar a descrição com a primeira letra maiuscula e ter a primeira palavra com pelo menos 4 caracteres (Descrição da ...)
+            É necessario iniciar a descrição com a primeira letra maiuscula e
+            ter a primeira palavra com pelo menos 4 caracteres (Descrição da
+            ...)
           </div>
         </mat-error>
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput placeholder="Tempo de preparo" formControlName="tempoPreparo" pattern="^[1-9][0-9]{0,3}$" required/>
+        <input
+          matInput
+          placeholder="Tempo de preparo"
+          formControlName="tempoPreparo"
+          pattern="^[1-9][0-9]{0,3}$"
+          required
+        />
         <mat-error>
           <div *ngIf="formReceita.controls['tempoPreparo'].errors?.required">
             É necessario digitar um tempo de preparo para a receita
@@ -71,41 +94,69 @@
       fxLayoutAlign="space-evenly center"
       fxLayoutGap="20px"
     >
-      <mat-form-field  appearance="legacy">
+      <mat-form-field appearance="legacy">
         <mat-label>Ingredientes da receita</mat-label>
-        <textarea matInput placeholder="Para cada novo ingrediente,pule uma linha" formControlName="ingredientes" pattern="[\wá-ú\s.+-:\*]*$" required></textarea>
+        <textarea
+          matInput
+          placeholder="Para cada novo ingrediente,pule uma linha"
+          formControlName="ingredientes"
+          pattern="[\wá-ú\s.+-:()\*]*$"
+          required
+        ></textarea>
         <mat-error>
           <div *ngIf="formReceita.controls['ingredientes'].errors?.required">
             É necessario digitar os ingredientes para a receita
           </div>
           <div *ngIf="formReceita.controls['ingredientes'].errors?.pattern">
-            O texto só deve contar caracteres alfanumericos e com os seguintes caracteres especiais: :+-.*
+            O texto só deve contar caracteres alfanumericos e com os seguintes
+            caracteres especiais: :+-.*
           </div>
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field  appearance="legacy">
+      <mat-form-field appearance="legacy">
         <mat-label>Modo de preparo</mat-label>
-        <textarea matInput placeholder="Para cada nova etapa do modo de preparo,pule uma linha" formControlName="modoPreparo" pattern="[\wá-ú\s.+-:\*]*$" required></textarea>
+        <textarea
+          matInput
+          placeholder="Para cada nova etapa do modo de preparo,pule uma linha"
+          formControlName="modoPreparo"
+          pattern="[\wá-ú\s.+-:()\*]*$"
+          required
+        ></textarea>
         <mat-error>
           <div *ngIf="formReceita.controls['modoPreparo'].errors?.required">
             É necessario digitar o modo de preparo para a receita
           </div>
           <div *ngIf="formReceita.controls['modoPreparo'].errors?.pattern">
-            O texto só deve contar caracteres alfanumericos e com os seguintes caracteres especiais: :+-.*
+            O texto só deve contar caracteres alfanumericos e com os seguintes
+            caracteres especiais: :+-.*
           </div>
         </mat-error>
       </mat-form-field>
     </div>
-    <br>
+    <br />
     <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
-      <button *ngIf="!this.formReceita.value.id" mat-raised-button color="warn" >Cancelar</button>
-      <button *ngIf="!this.formReceita.value.id" mat-raised-button color="primary" type="submit" [disabled]="!formReceita.valid">
-       Salvar
+      <button *ngIf="!this.formReceita.value.id" mat-raised-button color="warn">
+        Cancelar
       </button>
-      <button *ngIf="this.formReceita.value.id" mat-raised-button color="primary" type="submit" [disabled]="!formReceita.valid">
-      Atualizar
-       </button>
+      <button
+        *ngIf="!this.formReceita.value.id"
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!formReceita.valid"
+      >
+        Salvar
+      </button>
+      <button
+        *ngIf="this.formReceita.value.id"
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!formReceita.valid"
+      >
+        Atualizar
+      </button>
     </div>
   </form>
 </div>

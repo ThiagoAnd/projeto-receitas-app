@@ -4,8 +4,6 @@ import { environment } from 'src/environments/environment';
 import { Receita } from '../model/receita.model';
 import { take } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { WebStorageUtil } from '../util/web-storage-util';
-import { Constants } from '../util/constants';
 
 @Injectable({
   providedIn: 'root',
@@ -23,32 +21,18 @@ export class ReceitaService {
   }
 
   update(receita: Receita) {
-    return this.http.put(`${this.API}/receitas/${receita.id}`,receita).pipe(take(1))
+    return this.http
+      .put(`${this.API}/receitas/${receita.id}`, receita)
+      .pipe(take(1));
   }
 
   save(receita: Receita) {
-    if (receita.id)
-      return this.update(receita);
+    if (receita.id) return this.update(receita);
     return this.create(receita);
-  }
-
-  createWithPromise(receita: Receita): Promise<Receita> {
-    return this.http.post<Receita>(`${this.API}/receitas`, receita).toPromise();
   }
 
   list() {
     return this.http.get<Receita[]>(`${this.API}/receitas`);
-  }
-
-  saveOnWebStorage(receita: Receita) {
-    this.receitas = WebStorageUtil.get(Constants.RECEITAS_KEY);
-    this.receitas.push(receita);
-    WebStorageUtil.set(Constants.RECEITAS_KEY, this.receitas);
-  }
-
-  getReceitasOnWebStorage(): Receita[] {
-    this.receitas = WebStorageUtil.get(Constants.RECEITAS_KEY);
-    return this.receitas;
   }
 
   getReceita(id: number) {

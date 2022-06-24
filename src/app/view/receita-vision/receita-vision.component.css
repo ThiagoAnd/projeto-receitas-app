@@ -1,4 +1,4 @@
-.example-card {
+.card-receita {
   margin: 50px auto;
   max-width: 500px;
   padding-bottom: 1.5rem;
@@ -17,16 +17,22 @@ h4 {
   white-space: pre-wrap;
 }
 
-@media print{
+@media print {
   button {
     display: none;
   }
-  div,h4 {
+
+  div,
+  h4 {
     font-size: 20px;
   }
-  mat-card-content,div,h4 {
+
+  mat-card-content,
+  div,
+  h4 {
     margin-left: 15px;
   }
+
   .sobre {
     margin-top: 50px;
   }
@@ -36,30 +42,29 @@ h4 {
 
 .stack-top {
   /* adjust the below to control the shape */
-  --d:5px;
-  --w:200px;
-  --c:#333;
+  --d: 5px;
+  --w: 200px;
+  --c: #333;
   /**/
 
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(29.29%, -100%) rotate(45deg); /* 29.29% = 100%*(1 - cos(45deg)) */
+  transform: translate(29.29%, -100%) rotate(45deg);
+  /* 29.29% = 100%*(1 - cos(45deg)) */
   color: #fff;
   text-align: center;
   width: var(--w);
   transform-origin: bottom left;
-  padding:5px 0 calc(var(--d) + 5px);
+  padding: 5px 0 calc(var(--d) + 5px);
   background:
-    linear-gradient(rgba(0,0,0,0.6) 0 0) bottom/100% var(--d) no-repeat
-    var(--c);
-  clip-path:polygon(0 100%,0 calc(100% - var(--d)),50% calc(100% - var(--d) - var(--w)/2),100% calc(100% - var(--d)),100% 100%,calc(100% - var(--d)) calc(100% - var(--d)), var(--d) calc(100% - var(--d)))
+    linear-gradient(rgba(0, 0, 0, 0.6) 0 0) bottom/100% var(--d) no-repeat var(--c);
+  clip-path: polygon(0 100%, 0 calc(100% - var(--d)), 50% calc(100% - var(--d) - var(--w)/2), 100% calc(100% - var(--d)), 100% 100%, calc(100% - var(--d)) calc(100% - var(--d)), var(--d) calc(100% - var(--d)))
 }
 
 .stack-top.left {
-  left:0;
-  right:auto;
+  left: 0;
+  right: auto;
   transform: translate(-29.29%, -100%) rotate(-45deg);
   transform-origin: bottom right;
 }
-

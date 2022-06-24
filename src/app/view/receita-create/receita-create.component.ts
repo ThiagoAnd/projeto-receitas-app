@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Shared } from 'src/app/util/shared';
 import { Receita } from '../../model/receita.model';
 import { ReceitaService } from '../receita.service';
 import { map, switchMap } from 'rxjs/operators';
@@ -33,7 +32,8 @@ export class ReceitaCreateComponent implements OnInit {
       )
       .subscribe((receita) => {
         this.pageTitle = 'Pagina de edição';
-        this.updateForm(receita)});
+        this.updateForm(receita);
+      });
 
     this.criarFormulario(new Receita());
   }
@@ -54,19 +54,22 @@ export class ReceitaCreateComponent implements OnInit {
 
     this.service.save(this.formReceita.value).subscribe(
       (sucesso) => {
-        if(this.formReceita.value.id){
-        alert("Receita atualizada com sucesso");
-      }else {
-        alert("Receita salva com sucesso")
-      }
-      this.router.navigate(['receita/list']);
+        if (this.formReceita.value.id) {
+          alert('Receita atualizada com sucesso');
+        } else {
+          alert('Receita salva com sucesso');
+        }
+        this.router.navigate(['receita/list']);
       },
-      (erro) => alert("Não foi possivel salvar/atualizar a receita. Verifique se o json server esta ligado professor. Erro: "+JSON.stringify(erro))
+      (erro) =>
+        alert(
+          'Não foi possivel salvar/atualizar a receita. Verifique se o json server esta ligado professor. Erro: ' +
+            JSON.stringify(erro)
+        )
     );
   }
 
   criarFormulario(receita: Receita) {
-    console.log('receita criar formularioasdf: ' + JSON.stringify(receita));
     this.formReceita = this.formBuilder.group({
       id: null,
       nome: [receita.nome],
