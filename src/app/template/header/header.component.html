@@ -30,7 +30,7 @@
     fixedTopGap="55"
     #sidenav
   >
-    <mat-nav-list>
+    <mat-nav-list (click)="sidenav.toggle()">
       <a mat-list-item routerLink="/">
         <mat-icon>home</mat-icon>
         Home
