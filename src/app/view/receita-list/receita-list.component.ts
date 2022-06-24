@@ -20,6 +20,7 @@ export class ReceitaListComponent implements OnInit {
     'editar',
     'cancelar',
     'visualizar',
+    'acoes',
   ];
 
   constructor(private service: ReceitaService, private router: Router) {}
