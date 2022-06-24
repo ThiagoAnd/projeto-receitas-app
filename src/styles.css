@@ -12,3 +12,31 @@ app-root {
   display: flex;
   flex-direction: column;
 }
+
+.mat-success {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.mat-first {
+  background-color: #0275d8 ;
+  color: #fff;
+}
+
+.mat-first-small {
+  color: #0275d8;
+}
+
+.mat-info {
+  background-color: #5bc0de ;
+  color: #fff;
+}
+
+.mat-teal {
+  background-color: #00796B;
+  color: #fff;
+}
+
+.mat-teal-small {
+  color: #00796B;
+}

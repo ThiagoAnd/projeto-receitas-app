@@ -22,7 +22,7 @@ export class ReceitaCreateComponent implements OnInit {
   ) {}
   pageTitle = 'Pagina de criação';
 
-  categorias = ['Bolo', 'Torta', 'Salgado', 'Doce', 'Pão', 'Diversos'];
+  categorias = ['Bolo', 'Torta', 'Salgado', 'Doce','Sobremesa', 'Pão', 'Diversos'];
 
   ngOnInit() {
     this.route.params

@@ -29,12 +29,24 @@
       <td mat-cell *matCellDef="let element">
         <button
           mat-raised-button
-          color="primary"
+          color="first"
           type="submit"
           (click)="edit(element.id)"
+          fxShow="true"
+          fxHide.lt-md
         >
           <mat-icon>edit</mat-icon>
           Editar
+        </button>
+        <button
+          mat-icon-button
+          color="first-small"
+          type="submit"
+          (click)="edit(element.id)"
+          fxShow="false"
+          fxShow.lt-md
+        >
+          <mat-icon>edit</mat-icon>
         </button>
       </td>
     </ng-container>
@@ -47,9 +59,21 @@
           color="warn"
           type="submit"
           (click)="delete(element.id)"
+          fxShow="true"
+          fxHide.lt-md
         >
           <mat-icon>delete</mat-icon>
           Deletar
+        </button>
+        <button
+          mat-icon-button
+          color="warn"
+          type="submit"
+          (click)="delete(element.id)"
+          fxShow="false"
+          fxShow.lt-md
+        >
+          <mat-icon>delete</mat-icon>
         </button>
       </td>
     </ng-container>
@@ -59,12 +83,24 @@
       <td mat-cell *matCellDef="let element">
         <button
           mat-raised-button
-          color="accent"
+          color="teal"
           type="submit"
           (click)="view(element.id)"
+          fxShow="true"
+          fxHide.lt-md
         >
           <mat-icon>remove_red_eye</mat-icon>
           Visualizar
+        </button>
+        <button
+          mat-icon-button
+          color="teal-small"
+          type="submit"
+          (click)="view(element.id)"
+          fxShow="false"
+          fxShow.lt-md
+        >
+          <mat-icon>remove_red_eye</mat-icon>
         </button>
       </td>
     </ng-container>
