@@ -1,0 +1,157 @@
+<app-titulo-pagina [titulo]="pageTitle"></app-titulo-pagina>
+
+<div class="container">
+  <form [formGroup]="formReceita" (ngSubmit)="onSubmit()">
+    <div
+      fxLayout="column"
+      fxLayout.gt-xs="row"
+      fxLayoutAlign="space-evenly center"
+      fxLayoutGap="20px"
+    >
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Nome da receita"
+          formControlName="nome"
+          pattern="^[A-Z][a-zá-ú]{1,}[a-zA-Zá-ú\s]*$"
+          required
+        />
+        <mat-error>
+          <div *ngIf="formReceita.controls['nome'].errors?.required">
+            <strong> o nome da receita</strong>
+          </div>
+          <div *ngIf="formReceita.controls['nome'].errors?.pattern">
+            <strong>   Primeira palavra com primeira letra maiuscula e ao menos 2 caracteres</strong>
+          </div>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>Categoria</mat-label>
+        <select matNativeControl formControlName="categoria" required>
+          <option selected></option>
+          <option *ngFor="let categoria of categorias" [value]="categoria">
+            {{ categoria }}
+          </option>
+        </select>
+        <mat-error>
+          <div *ngIf="formReceita.controls['categoria'].errors?.required">
+            <strong> Escolha a categoria</strong>
+          </div>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div
+      fxLayout="column"
+      fxLayout.gt-xs="row"
+      fxLayoutAlign="space-evenly center"
+      fxLayoutGap="20px"
+    >
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Descrição"
+          formControlName="descricao"
+          pattern="^[A-Z][a-zá-ú]{1,}[a-zA-Zá-ú\s]*$"
+          required
+        />
+        <mat-error>
+          <div *ngIf="formReceita.controls['descricao'].errors?.required">
+            <strong> Digite a descrição</strong>
+          </div>
+          <div *ngIf="formReceita.controls['descricao'].errors?.pattern">
+            <strong>  Primeira palavra com primeira letra maiuscula e ao menos 2 caracteres </strong>
+          </div>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Tempo de preparo"
+          formControlName="tempoPreparo"
+          pattern="^[1-9][0-9]{0,3}$"
+          required
+        />
+        <mat-error>
+          <div *ngIf="formReceita.controls['tempoPreparo'].errors?.required">
+            <strong>  Digite um tempo de preparo</strong>
+          </div>
+          <div *ngIf="formReceita.controls['tempoPreparo'].errors?.pattern">
+            <strong>  O tempo deve ir de 1 a 9999 minutos</strong>
+          </div>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div
+      fxLayout="column"
+      fxLayout.gt-xs="row"
+      fxLayoutAlign="space-evenly center"
+      fxLayoutGap="20px"
+    >
+      <mat-form-field appearance="legacy">
+        <mat-label>Ingredientes</mat-label>
+        <textarea
+          matInput
+          placeholder="Para cada novo ingrediente,pule uma linha"
+          formControlName="ingredientes"
+          pattern="[\wá-ú\s.+-:()\*]*$"
+          required
+        ></textarea>
+        <mat-error>
+          <div *ngIf="formReceita.controls['ingredientes'].errors?.required">
+            <strong>  Digite os ingredientes </strong>
+          </div>
+          <div *ngIf="formReceita.controls['ingredientes'].errors?.pattern">
+            <strong> Somente alfanumericos e :+-.*()</strong>
+          </div>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>Modo de preparo</mat-label>
+        <textarea
+          matInput
+          placeholder="Para cada nova etapa do modo de preparo,pule uma linha"
+          formControlName="modoPreparo"
+          pattern="[\wá-ú\s.+-:()\*]*$"
+          required
+        ></textarea>
+        <mat-error>
+          <div *ngIf="formReceita.controls['modoPreparo'].errors?.required">
+            <strong>  Digite o modo de preparo </strong>
+          </div>
+          <div *ngIf="formReceita.controls['modoPreparo'].errors?.pattern">
+            <strong>  Somente alfanumericos e :+-.*() </strong>
+          </div>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <br />
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
+      <button type="reset" *ngIf="!this.formReceita.value.id" mat-raised-button color="warn">
+        Limpar
+      </button>
+      <button
+        *ngIf="!this.formReceita.value.id"
+        mat-raised-button
+        color="success"
+        type="submit"
+        [disabled]="!formReceita.valid"
+      >
+        Salvar
+      </button>
+      <button
+        *ngIf="this.formReceita.value.id"
+        mat-raised-button
+        color="success"
+        type="submit"
+        [disabled]="!formReceita.valid"
+      >
+        Atualizar
+      </button>
+    </div>
+  </form>
+</div>
