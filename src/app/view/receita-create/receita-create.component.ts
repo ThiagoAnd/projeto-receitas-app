@@ -20,7 +20,7 @@ export class ReceitaCreateComponent implements OnInit {
     private service: ReceitaService,
     private router: Router
   ) {}
-  pageTitle = 'Pagina de criação';
+  pageTitle = 'Criação de receita';
 
   categorias = ['Bolo', 'Torta', 'Salgado', 'Doce','Sobremesa', 'Pão', 'Diversos'];
 
@@ -31,7 +31,7 @@ export class ReceitaCreateComponent implements OnInit {
         switchMap((id) => this.service.getReceita(id))
       )
       .subscribe((receita) => {
-        this.pageTitle = 'Pagina de edição';
+        this.pageTitle = 'Edição de receita';
         this.updateForm(receita);
       });
 

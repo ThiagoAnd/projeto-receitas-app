@@ -10,7 +10,7 @@ import { Receita } from 'src/app/model/receita.model';
   styleUrls: ['./receita-vision.component.css'],
 })
 export class ReceitaVisionComponent implements OnInit {
-  pageTitle = 'Pagina de visualização';
+  pageTitle = 'Receita pronta';
 
   constructor(
     private route: ActivatedRoute,

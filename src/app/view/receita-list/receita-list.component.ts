@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./receita-list.component.css'],
 })
 export class ReceitaListComponent implements OnInit {
-  pageTitle = 'Pagina de listagem';
+  pageTitle = 'Lista de receitas';
   receitas!: Receita[];
   dataSource!: Receita[];
   displayedColumns: string[] = [
