@@ -1,6 +1,6 @@
 # Sobre
 
-Sobre o projeto
+Projeto com foco em gestão de receitas pessoais para a disciplina de framework da UTFPR
 
 # Protótipo
 
@@ -8,7 +8,7 @@ https://www.figma.com/file/qtQcWudxVOs2XATqPpcY65/Design-do-projeto
 
 # Aplicação
 
-Url da aplicação
+https://receitas-app.herokuapp.com
 
 # Checklist
 
@@ -29,4 +29,4 @@ Url da aplicação
 - [x] Apresentar uma lista de dados com a diretiva estrutural ngFor.
 - [x] Usar a diretiva ngIf
 - [x] Formatar a apresentação de dados com Pipes.
-- [ ] Build e deploy da aplicação.
+- [x] Build e deploy da aplicação.

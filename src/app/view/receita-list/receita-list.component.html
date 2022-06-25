@@ -1,0 +1,166 @@
+<app-titulo-pagina [titulo]="pageTitle"></app-titulo-pagina><br />
+
+<div fxLayout fxLayoutAlign="center center" class="container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabela">
+    <!--- A ordem das colunas é alterado no array do .ts" -->
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef fxShow="true" fxHide.lt-sm>Id</th>
+      <td mat-cell *matCellDef="let element" fxShow="true" fxHide.lt-sm>{{ element.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef>Nome</th>
+      <td mat-cell *matCellDef="let element">{{ element.nome }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="tempoPreparo">
+      <th mat-header-cell *matHeaderCellDef fxShow="true" fxHide.lt-lg>
+        Tempo de preparo
+      </th>
+      <td mat-cell *matCellDef="let element" fxShow="true" fxHide.lt-lg>
+        {{ element.tempoPreparo }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="categoria">
+      <th mat-header-cell *matHeaderCellDef fxShow="true" fxHide.lt-md>
+        Categoria
+      </th>
+      <td mat-cell *matCellDef="let element" fxShow="true" fxHide.lt-md>
+        {{ element.categoria }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="editar">
+      <th mat-header-cell *matHeaderCellDef fxShow="true" fxHide.lt-sm>
+        Editar
+      </th>
+      <td mat-cell *matCellDef="let element" fxShow="true" fxHide.lt-sm>
+        <button
+          mat-raised-button
+          color="first"
+          type="submit"
+          (click)="edit(element.id)"
+          fxShow="true"
+          fxHide.lt-md
+        >
+          <mat-icon>edit</mat-icon>
+          Editar
+        </button>
+        <button
+          mat-icon-button
+          color="first-small"
+          type="submit"
+          (click)="edit(element.id)"
+          fxShow="false"
+          fxShow.lt-md
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cancelar">
+      <th mat-header-cell *matHeaderCellDef fxShow="true" fxHide.lt-sm>
+        Deletar
+      </th>
+      <td mat-cell *matCellDef="let element" fxShow="true" fxHide.lt-sm>
+        <button
+          mat-raised-button
+          color="warn"
+          type="submit"
+          (click)="delete(element.id)"
+          fxShow="true"
+          fxHide.lt-md
+        >
+          <mat-icon>delete</mat-icon>
+          Deletar
+        </button>
+        <button
+          mat-icon-button
+          color="warn"
+          type="submit"
+          (click)="delete(element.id)"
+          fxShow="false"
+          fxShow.lt-md
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="visualizar">
+      <th mat-header-cell *matHeaderCellDef fxShow="true" fxHide.lt-sm>
+        Visualizar
+      </th>
+      <td mat-cell *matCellDef="let element" fxShow="true" fxHide.lt-sm>
+        <button
+          mat-raised-button
+          color="teal"
+          type="submit"
+          (click)="view(element.id)"
+          fxShow="true"
+          fxHide.lt-md
+        >
+          <mat-icon>remove_red_eye</mat-icon>
+          Visualizar
+        </button>
+        <button
+          mat-icon-button
+          color="teal-small"
+          type="submit"
+          (click)="view(element.id)"
+          fxShow="false"
+          fxShow.lt-md
+        >
+          <mat-icon>remove_red_eye</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="acoes" >
+      <th mat-header-cell *matHeaderCellDef fxShow="false" fxShow.lt-sm style="padding-right: 1%;">
+        Acoes
+      </th>
+      <td mat-cell *matCellDef="let element" fxShow="false" fxShow.lt-sm style="padding-right: 1%;">
+        <button
+          mat-icon-button
+          color="first-small"
+          type="submit"
+          (click)="edit(element.id)"
+          fxShow="false"
+          fxShow.lt-sm
+          class="responsive-icon"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          color="warn"
+          type="submit"
+          (click)="delete(element.id)"
+          fxShow="false"
+          fxShow.lt-sm
+          class="responsive-icon"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          color="teal-small"
+          type="submit"
+          (click)="view(element.id)"
+          fxShow="false"
+          fxShow.lt-sm
+          class="responsive-icon"
+        >
+          <mat-icon>remove_red_eye</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

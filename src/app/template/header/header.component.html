@@ -1,0 +1,51 @@
+<mat-toolbar color="primary">
+  <div fxHide="true" fxShow.lt-sm>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <img src="../../../assets/logo.png"  width="100" height="60" fxShow="true" fxHide.lt-sm>
+  <span class="espaco"></span>
+  <mat-nav-list fxLayout="row" fxHide="true" fxShow.lt-sm>
+    <img src="../../../assets/logo.png"  width="100" height="60">
+  </mat-nav-list>
+  <mat-nav-list fxLayout="row" fxShow="true" fxHide.lt-sm>
+    <a mat-list-item routerLink="/">
+      <mat-icon>home</mat-icon>
+      Home
+    </a>
+    <a mat-list-item routerLink="/receita/create">
+      <mat-icon>library_add</mat-icon>
+      Criar
+    </a>
+    <a mat-list-item routerLink="/receita/list">
+      <mat-icon>library_books</mat-icon>
+      Lista
+    </a>
+  </mat-nav-list>
+</mat-toolbar>
+
+<mat-sidenav-container class="container" fxHide="true" fxShow.lt-sm>
+  <mat-sidenav
+    class="sidenav"
+    mode="side"
+    fixedInViewport="true"
+    fixedTopGap="55"
+    #sidenav
+  >
+    <mat-nav-list (click)="sidenav.toggle()">
+      <a mat-list-item routerLink="/">
+        <mat-icon>home</mat-icon>
+        Home
+      </a>
+      <a mat-list-item routerLink="/receita/create">
+        <mat-icon>library_add</mat-icon>
+        Criar
+      </a>
+      <a mat-list-item routerLink="/receita/list">
+        <mat-icon>library_books</mat-icon>
+        Lista
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+</mat-sidenav-container>
