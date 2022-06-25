@@ -13,7 +13,7 @@
           matInput
           placeholder="Nome da receita"
           formControlName="nome"
-          pattern="^[A-Z][a-zá-ú]{3,}[a-zA-Zá-ú\s]*$"
+          pattern="^[A-Z][a-zá-ú]{1,}[a-zA-Zá-ú\s]*$"
           required
         />
         <mat-error>
@@ -21,7 +21,7 @@
             <strong> o nome da receita</strong>
           </div>
           <div *ngIf="formReceita.controls['nome'].errors?.pattern">
-            <strong>   Primeira palavra com primeira letra maiuscula e ao menos 4 caracteres</strong>
+            <strong>   Primeira palavra com primeira letra maiuscula e ao menos 2 caracteres</strong>
           </div>
         </mat-error>
       </mat-form-field>
@@ -53,7 +53,7 @@
           matInput
           placeholder="Descrição"
           formControlName="descricao"
-          pattern="^[A-Z][a-zá-ú]{3,}[a-zA-Zá-ú\s]*$"
+          pattern="^[A-Z][a-zá-ú]{1,}[a-zA-Zá-ú\s]*$"
           required
         />
         <mat-error>
@@ -61,7 +61,7 @@
             <strong> Digite a descrição</strong>
           </div>
           <div *ngIf="formReceita.controls['descricao'].errors?.pattern">
-            <strong>  Primeira palavra com primeira letra maiuscula e ao menos 4 caracteres </strong>
+            <strong>  Primeira palavra com primeira letra maiuscula e ao menos 2 caracteres </strong>
           </div>
         </mat-error>
       </mat-form-field>
