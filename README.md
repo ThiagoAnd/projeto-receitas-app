@@ -8,7 +8,7 @@ https://www.figma.com/file/qtQcWudxVOs2XATqPpcY65/Design-do-projeto
 
 # Aplicação
 
-Url da aplicação
+https://receitas-app.herokuapp.com
 
 # Checklist
 
