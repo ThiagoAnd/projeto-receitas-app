@@ -1,10 +1,10 @@
 <mat-toolbar color="primary">
   <div fxHide="true" fxShow.lt-sm>
-    <button mat-icon-button (click)="toggle()">
+    <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
   </div>
-  <span>Receitas pessoais</span>
+  <img src="../../../assets/logo.png"  width="120" height="80">
   <span class="espaco"></span>
   <mat-nav-list fxLayout="row" fxShow="true" fxHide.lt-sm>
     <a mat-list-item routerLink="/">
@@ -29,9 +29,8 @@
     fixedInViewport="true"
     fixedTopGap="55"
     #sidenav
-    [opened]="aberto"
   >
-    <mat-nav-list (click)="toggle()">
+    <mat-nav-list (click)="sidenav.toggle()">
       <a mat-list-item routerLink="/">
         <mat-icon>home</mat-icon>
         Home
