@@ -14,7 +14,6 @@ export class ReceitaService {
 
   constructor(private http: HttpClient) {}
 
-  //Com o take 1, a partir da ida e volta do servidor , ja finaliza o observable e não precisa fazer unsubscribe
 
   create(receita: Receita) {
     return this.http.post(`${this.API}/receitas`, receita).pipe(take(1));
@@ -32,7 +31,7 @@ export class ReceitaService {
   }
 
   list() {
-    return this.http.get<Receita[]>(`${this.API}/receitas`);
+    return this.http.get<Receita[]>(`${this.API}`);
   }
 
   getReceita(id: number) {

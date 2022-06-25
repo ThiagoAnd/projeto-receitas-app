@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <div fxHide="true" fxShow.lt-sm>
-    <button mat-icon-button (click)="sidenav.toggle()">
+    <button mat-icon-button (click)="toggle()">
       <mat-icon>menu</mat-icon>
     </button>
   </div>
@@ -29,8 +29,9 @@
     fixedInViewport="true"
     fixedTopGap="55"
     #sidenav
+    [opened]="aberto"
   >
-    <mat-nav-list (click)="sidenav.toggle()">
+    <mat-nav-list (click)="toggle()">
       <a mat-list-item routerLink="/">
         <mat-icon>home</mat-icon>
         Home
