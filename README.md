@@ -1,6 +1,6 @@
 # Sobre
 
-Sobre o projeto
+Projeto com foco em gestão de receitas pessoais para a disciplina de framework da UTFPR
 
 # Protótipo
 
