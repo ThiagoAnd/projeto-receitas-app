@@ -18,11 +18,10 @@
         />
         <mat-error>
           <div *ngIf="formReceita.controls['nome'].errors?.required">
-            É necessario digitar um nome para a receita
+            <strong> o nome da receita</strong>
           </div>
           <div *ngIf="formReceita.controls['nome'].errors?.pattern">
-            É necessario iniciar o nome com a primeira letra maiuscula e ter a
-            primeira palavra com pelo menos 4 caracteres (Bolo de ..)
+            <strong>   Primeira palavra com primeira letra maiuscula e ao menos 4 caracteres</strong>
           </div>
         </mat-error>
       </mat-form-field>
@@ -37,7 +36,7 @@
         </select>
         <mat-error>
           <div *ngIf="formReceita.controls['categoria'].errors?.required">
-            É necessario escolher uma categoria para a receita
+            <strong> Escolha a categoria</strong>
           </div>
         </mat-error>
       </mat-form-field>
@@ -52,19 +51,17 @@
       <mat-form-field>
         <input
           matInput
-          placeholder="Descrição da receita"
+          placeholder="Descrição"
           formControlName="descricao"
           pattern="^[A-Z][a-zá-ú]{3,}[a-zA-Zá-ú\s]*$"
           required
         />
         <mat-error>
           <div *ngIf="formReceita.controls['descricao'].errors?.required">
-            É necessario digitar uma descrição para a receita
+            <strong> Digite a descrição</strong>
           </div>
           <div *ngIf="formReceita.controls['descricao'].errors?.pattern">
-            É necessario iniciar a descrição com a primeira letra maiuscula e
-            ter a primeira palavra com pelo menos 4 caracteres (Descrição da
-            ...)
+            <strong>  Primeira palavra com primeira letra maiuscula e ao menos 4 caracteres </strong>
           </div>
         </mat-error>
       </mat-form-field>
@@ -79,10 +76,10 @@
         />
         <mat-error>
           <div *ngIf="formReceita.controls['tempoPreparo'].errors?.required">
-            É necessario digitar um tempo de preparo para a receita
+            <strong>  Digite um tempo de preparo</strong>
           </div>
           <div *ngIf="formReceita.controls['tempoPreparo'].errors?.pattern">
-            O tempo deve ir de 1 a 9999 minutos
+            <strong>  O tempo deve ir de 1 a 9999 minutos</strong>
           </div>
         </mat-error>
       </mat-form-field>
@@ -95,7 +92,7 @@
       fxLayoutGap="20px"
     >
       <mat-form-field appearance="legacy">
-        <mat-label>Ingredientes da receita</mat-label>
+        <mat-label>Ingredientes</mat-label>
         <textarea
           matInput
           placeholder="Para cada novo ingrediente,pule uma linha"
@@ -105,11 +102,10 @@
         ></textarea>
         <mat-error>
           <div *ngIf="formReceita.controls['ingredientes'].errors?.required">
-            É necessario digitar os ingredientes para a receita
+            <strong>  Digite os ingredientes </strong>
           </div>
           <div *ngIf="formReceita.controls['ingredientes'].errors?.pattern">
-            O texto só deve contar caracteres alfanumericos e com os seguintes
-            caracteres especiais: :+-.*
+            <strong> Somente alfanumericos e :+-.*()</strong>
           </div>
         </mat-error>
       </mat-form-field>
@@ -125,11 +121,10 @@
         ></textarea>
         <mat-error>
           <div *ngIf="formReceita.controls['modoPreparo'].errors?.required">
-            É necessario digitar o modo de preparo para a receita
+            <strong>  Digite o modo de preparo </strong>
           </div>
           <div *ngIf="formReceita.controls['modoPreparo'].errors?.pattern">
-            O texto só deve contar caracteres alfanumericos e com os seguintes
-            caracteres especiais: :+-.*
+            <strong>  Somente alfanumericos e :+-.*() </strong>
           </div>
         </mat-error>
       </mat-form-field>

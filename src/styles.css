@@ -1,6 +1,11 @@
 body {
   margin: 0;
+
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-image: url('assets/talvez3tra2.png');
+  background-size: cover;
+  opacity: 0.9;
+
 }
 
 app-footer {
@@ -40,3 +45,4 @@ app-root {
 .mat-teal-small {
   color: #00796B;
 }
+
