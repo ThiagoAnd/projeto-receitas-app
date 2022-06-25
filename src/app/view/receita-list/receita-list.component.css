@@ -10,3 +10,7 @@ td.mat-cell {
 .container {
   padding-bottom: 3.5rem;
 }
+
+.responsive-icon {
+  width: 30%;
+}

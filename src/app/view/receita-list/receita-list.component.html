@@ -119,11 +119,11 @@
       </td>
     </ng-container>
 
-    <ng-container matColumnDef="acoes">
-      <th mat-header-cell *matHeaderCellDef fxShow="false" fxShow.lt-sm>
+    <ng-container matColumnDef="acoes" >
+      <th mat-header-cell *matHeaderCellDef fxShow="false" fxShow.lt-sm style="padding-right: 1%;">
         Acoes
       </th>
-      <td mat-cell *matCellDef="let element" fxShow="false" fxShow.lt-sm>
+      <td mat-cell *matCellDef="let element" fxShow="false" fxShow.lt-sm style="padding-right: 1%;">
         <button
           mat-icon-button
           color="first-small"
@@ -131,6 +131,7 @@
           (click)="edit(element.id)"
           fxShow="false"
           fxShow.lt-sm
+          class="responsive-icon"
         >
           <mat-icon>edit</mat-icon>
         </button>
@@ -141,6 +142,7 @@
           (click)="delete(element.id)"
           fxShow="false"
           fxShow.lt-sm
+          class="responsive-icon"
         >
           <mat-icon>delete</mat-icon>
         </button>
@@ -151,6 +153,7 @@
           (click)="view(element.id)"
           fxShow="false"
           fxShow.lt-sm
+          class="responsive-icon"
         >
           <mat-icon>remove_red_eye</mat-icon>
         </button>
