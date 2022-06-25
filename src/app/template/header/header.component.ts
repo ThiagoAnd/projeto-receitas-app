@@ -10,7 +10,4 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  teste() {
-    alert('testando')
-  }
 }
