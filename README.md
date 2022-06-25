@@ -4,7 +4,7 @@ Projeto com foco em gestão de receitas pessoais para a disciplina de framework 
 
 # Protótipo
 
-https://www.figma.com/file/qtQcWudxVOs2XATqPpcY65/Design-do-projeto
+https://www.figma.com/file/qtQcWudxVOs2XATqPpcY65/Design-do-projeto?node-id=1%3A2
 
 # Aplicação
 
